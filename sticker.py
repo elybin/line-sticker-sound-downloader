@@ -4,7 +4,13 @@ import re
 import os
 import unicodedata
 from bs4 import BeautifulSoup
-import subprocess
+
+import argparse
+
+#construct the argument parse and parse the arg
+ap = argparse.ArgumentParser()
+ap.add_argument("-i","--id", help = "sticker id (ex: 8455)")
+args = vars(ap.parse_args())
 
 def slugify(value):
     """
@@ -16,7 +22,7 @@ def slugify(value):
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '-', value)
 
-sticker_id = 8455
+sticker_id = args["id"]
 
 
 # specify the url
