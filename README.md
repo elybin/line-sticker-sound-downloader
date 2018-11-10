@@ -1,4 +1,4 @@
-# line-sticker-sound-downloader
+# Line Sticker Sound Downloader
 I tried to scrap line sticker sound with python
 
 
